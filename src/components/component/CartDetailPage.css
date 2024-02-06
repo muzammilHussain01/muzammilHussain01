@@ -1,0 +1,40 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  background-color: rgb(240, 233, 225);
+}
+.pContainer {
+  border: 2px solid black;
+  height: fit-content;
+  background-color: rgb(247, 242, 236);
+}
+.pContainer:hover {
+  border: 2px solid black;
+  transform: scale(1.01);
+  box-shadow: 5px 0px 20px 0 rgb(237, 178, 105);
+}
+.pContainer ul li {
+  list-style: none;
+}
+.pContainer ul li button {
+  cursor: pointer;
+  background-color: azure;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0 0 blue;
+  color: blue;
+}
+.pContainer ul li button:hover {
+  cursor: pointer;
+  background-color: azure;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0 0 red;
+  color: red;
+}
+
+.productImg {
+  width: 100px;
+  height: 110px;
+}
