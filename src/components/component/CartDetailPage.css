@@ -4,26 +4,29 @@
   grid-gap: 50px;
   background-color: rgb(240, 233, 225);
 }
+.cart-add-btn {
+  float: right;
+}
 .pContainer {
   border: 2px solid black;
   height: fit-content;
   background-color: rgb(247, 242, 236);
 }
 .pContainer:hover {
-  border: 2px solid black;
   transform: scale(1.01);
   box-shadow: 5px 0px 20px 0 rgb(237, 178, 105);
 }
 .pContainer ul li {
   list-style: none;
+  font-size: small;
+  font-weight: 500;
+  padding-left: 0px;
 }
 .pContainer ul li button {
-  cursor: pointer;
-  background-color: azure;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 2px 2px 0 0 blue;
-  color: blue;
+  margin-top: 5%;
+  padding-left: 0%;
+  width: 70%;
+  font-size: xx-small;
 }
 .pContainer ul li button:hover {
   cursor: pointer;

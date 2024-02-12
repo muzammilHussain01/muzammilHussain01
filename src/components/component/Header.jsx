@@ -4,12 +4,10 @@ import "./Header.css";
 const Header = () => {
   const header = useRef();
   const handelButton = () => {
-    if (header.current.style.display === "none") {
-      header.current.style.display = "block";
-
-      header.current.style.transition = "1s ease-in";
-    } else {
+    if (header.current.style.display === "block") {
       header.current.style.display = "none";
+    } else {
+      header.current.style.display = "block";
     }
   };
 
@@ -18,7 +16,7 @@ const Header = () => {
       <div className="btndiv">
         <button onClick={handelButton}>= </button>
       </div>
-      <div className="hederContainer" ref={header}>
+      <div className="hederContainer" style={{ display: "none" }} ref={header}>
         <ul>
           <li>Home</li>
           <li>About-Us</li>

@@ -1,35 +1,36 @@
-import React, { useRef } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Button } from "@mui/material";
-
+import { decNumber } from "../../components/action/index.jsx";
 import IconButton from "@mui/material/IconButton";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
+import "./ProductPage.css";
 
-import { decNumber } from "../../components/action/index.jsx";
 const ProductPage = () => {
-  const dispatch = useDispatch("none");
-
-  const hidePage = useRef();
-  const showCartPage = () => {
-    if (hidePage.current.style.display === "block") {
-      hidePage.current.style.display = "none";
-    } else {
-      hidePage.current.style.display = "block";
-    }
-  };
   const myState = useSelector((state) => state.changeTheNumber);
+  const dispatch = useDispatch();
 
   return (
     <>
       <IconButton color="primary" aria-label="add to shopping cart">
-        <AddShoppingCartIcon onClick={showCartPage} />
-        <h6>{myState}</h6>
+        <AddShoppingCartIcon />
+        <h6>{myState.count}</h6>
       </IconButton>
 
-      <div ref={hidePage} style={{ display: "none" }}>
-        <h1>Total Items: {myState}</h1>
-        Product Details
+      <div className="cartContainer">
+        <h1>Total Items: {myState.count}</h1>
+        <h1>Product Details</h1>
+        <p>Product Name: {myState.info.pName}</p>
+
+        <p>Price: {myState.info.price * myState.count}$</p>
+        <p>Discount: {myState.info.discount * myState.count}%</p>
+        <p>
+          Discounted Price:{" "}
+          {myState.info.price -
+            (myState.info.discount * myState.info.price) / 100}
+          $
+        </p>
+
         <IconButton
           color="error"
           aria-label="remove from shopping cart"

@@ -1,0 +1,12 @@
+.cartContainer {
+  background-color: rgb(250, 243, 243);
+}
+.cartContainer h1 {
+  background-color: rgb(233, 212, 212);
+}
+.cartContainer p {
+  background-color: rgb(250, 243, 243);
+  border: 1px dotted black;
+  width: fit-content;
+  background-color: rgb(223, 245, 245);
+}

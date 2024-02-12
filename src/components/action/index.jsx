@@ -10,4 +10,15 @@ const decNumber = () => {
   };
 };
 
-export { incNumber, decNumber };
+const productInfo = (pName, price, discount) => {
+  return {
+    type: "productInfo",
+    payload: {
+      pName: pName,
+      price: price,
+      discount: discount,
+    },
+  };
+};
+
+export { incNumber, decNumber, productInfo };
