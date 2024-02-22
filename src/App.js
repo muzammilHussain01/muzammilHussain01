@@ -60,6 +60,14 @@ function App() {
         degree="12th"
         org="Student"
       />
+      <AboutMe
+        candidateImg="https://img.freepik.com/free-photo/glassclad-skyscrapers-central-mumbai-reflecting-sunset-hues-blue-hour_469504-15.jpg?w=740&t=st=1708590104~exp=1708590704~hmac=a2817eef47a45d31a805c00602501dc5e615e121273115e3277d7ee22ab912f4"
+        name="Vikas Gupta"
+        age={32}
+        sex="Male"
+        degree="M.Com"
+        org="SBI-Bank"
+      />
       {/*
       <RouterProvider router={router} />*/}
     </>
