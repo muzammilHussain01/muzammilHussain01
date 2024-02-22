@@ -25,7 +25,8 @@
 .pContainer ul li button {
   margin-top: 5%;
   padding-left: 0%;
-  width: 70%;
+  width: 25%;
+
   font-size: xx-small;
 }
 .pContainer ul li button:hover {
